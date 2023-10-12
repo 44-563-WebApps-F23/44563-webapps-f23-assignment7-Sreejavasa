@@ -118,7 +118,7 @@ margin: 0px;}
             return;
         }
 
-        var id = ids[position];
+var id = ids[position];
         var img = document.getElementById(id);
 
         if (position === treasureLocation) {
@@ -175,6 +175,15 @@ document.getElementById("help").onclick = function () {
     document.getElementById("penalty").textContent = "Penalty: " + penalty;
 
     document.getElementById("help").textContent = "Help: " + helpText;
+};
+document.getElementById("new-game-button").onclick= function () {
+   trapLocation = Math.floor(Math.random() * 25);
+   treasureLocation = Math.floor(Math.random() * 25);
+    penalty=0;
+    checkCount=0;
+    document.getElementById("penalty").textContent = "Penalty: " + penalty;
+    document.getElementById("locations").textContent = 
+        "Locations Checked: " + checkCount;
 };
 
 </script>
